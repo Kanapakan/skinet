@@ -53,6 +53,8 @@
           <button (click)="onReset()" class="btn btn-outline-success mx-2">Reset</button>
         </div>
       </div>
+
+      <!-- Product item -->
       <div class="row row-cols-3 g-3 mb-4">
         <div class="col" *ngFor="let product of products">
           <app-product-item [product]="product"></app-product-item>
