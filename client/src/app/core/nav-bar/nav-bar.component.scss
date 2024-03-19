@@ -10,6 +10,14 @@
     right: 32px;
 }
 
+.nav-link {
+    text-decoration: none;
+    color: black;
+    &.active {
+        color: orange;
+    }
+}
+
 .logo {
     cursor: pointer;
 }
