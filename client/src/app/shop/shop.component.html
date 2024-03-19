@@ -1,7 +1,7 @@
 <div class="container">
-  <div class="row">
+  <div class="row" *ngIf="types.length > 0 && brands.length > 0">
     <section class="col-3">
-      <h5 class="text-warning ms-3">Sort</h5>
+      <h5 class="text-warning ms-1">Sort</h5>
       <select
         class="form-select mb-4"
         role="button"
@@ -12,7 +12,7 @@
         </option>
       </select>
 
-      <h5 class="ms-1">Brands</h5>
+      <h5 class="text-warning ms-1">Brands</h5>
       <ul class="list-group my-3">
         <li
           class="list-group-item"
@@ -25,7 +25,7 @@
           {{ brand.name }}
         </li>
       </ul>
-      <h5 class="ms-1">Types</h5>
+      <h5 class="text-warning ms-1">Types</h5>
       <ul class="list-group my-3">
         <li
           class="list-group-item"
@@ -50,7 +50,7 @@
         <div class="d-flex mt-2">
           <input (keyup.enter)="onSearch()" type="text" placeholder="Search" class="form-control me-2" #search />
           <button (click)="onSearch()" class="btn btn-outline-primary mx-2">Search</button>
-          <button (click)="onReset()" class="btn btn-outline-success mx-2">Reset</button>
+          <button (click)="onReset()" class="btn btn-outline-secondary mx-2">Reset</button>
         </div>
       </div>
 
