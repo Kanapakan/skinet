@@ -1,4 +1,4 @@
-<div class="bg-light px-4 py-3 text-uppercase fw-bold">Order Summary</div>
+<div class="bg-light px-4 py-3 text-uppercase fw-bold text-dark">Order Summary</div>
 
 <div class="p-4">
   <p class="fst-italic mb-4">
@@ -6,16 +6,16 @@
   </p>
 	<ul class="list-unstyled mb-4" *ngIf="(basketService.basketTotalSource$ | async) as totals">
 		<li class="d-flex justify-content-between py-3 border-bottom">
-			<strong class="text-muted">Order subtotal</strong>
-			<strong>{{totals.subtotal | currency}}</strong>
+			<strong>Order subtotal</strong>
+			<strong class="text-dark">{{totals.subtotal | currency}}</strong>
 		</li>
 		<li class="d-flex justify-content-between py-3 border-bottom">
-			<strong class="text-muted">Shipping and handling</strong>
-			<strong>{{totals.shipping| currency}}</strong>
+			<strong>Shipping and handling</strong>
+			<strong class="text-dark">{{totals.shipping| currency}}</strong>
 		</li>
 		<li class="d-flex justify-content-between py-3 border-bottom">
-			<strong class="text-muted">Total</strong>
-			<strong>{{totals.total| currency}}</strong>
+			<strong>Total</strong>
+			<strong class="text-dark">{{totals.total| currency}}</strong>
 		</li>
 	</ul>
 </div>
