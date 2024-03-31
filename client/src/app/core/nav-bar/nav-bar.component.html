@@ -14,7 +14,9 @@
   <div class="col-4 d-flex justify-content-end align-items-center">
     <a routerLink="/basket" class="position-relative">
       <i class="fa fa-shopping-cart fa-2x me-5 text-dark"></i>
-			<div class="cart-no pt-1">5</div>
+			<div *ngIf="(basketService.basketSource$ | async) as basket" class="cart-no pt-1">
+        {{getCount(basket.items)}}
+      </div>
     </a>
     <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
   </div>
