@@ -24,7 +24,7 @@
     </ng-container>
 
     <ng-container *ngIf="accountService.currentUser$ | async as user">
-      <p>Welcome {{user.displatName}}</p>
+      <p>Welcome {{user.displayName}}</p>
     </ng-container>
   </div>
 </header>
